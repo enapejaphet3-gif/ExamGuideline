@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="ExamGuide - Examination Instructions and Guidelines Management System.">
+
+    <title>ExamGuide | Examination Guidelines Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">📘</div>
+
+            <div class="logo-text">
+
+                <h2>ExamGuide</h2>
+
+                <p>Examination Guidelines</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-menu">
+
+            <button
+                type="button"
+                class="menu-item active"
+                data-view="dashboard">
+
+                🏠 Dashboard
+
+            </button>
+
+            <button
+                type="button"
+                class="menu-item"
+                data-view="guidelines">
+
+                📚 Guidelines
+
+            </button>
+
+            <button
+                type="button"
+                class="menu-item"
+                data-view="instructions">
+
+                📋 Instructions
+
+            </button>
+
+            <button
+                type="button"
+                class="menu-item"
+                data-view="announcements">
+
+                📢 Announcements
+
+            </button>
+
+            <button
+                type="button"
+                class="menu-item"
+                data-view="manage">
+
+                ⚙️ Manage Content
+
+            </button>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <button
+                type="button"
+                id="themeToggle"
+                class="theme-toggle">
+
+                🌙 Dark Mode
+
+            </button>
+
+            <div class="student-info">
+
+                <p>Developed By</p>
+
+                <strong>
+                    ENAPE JAPHET OJONUGWA
+                </strong>
+
+                <small>
+                    2025/HND/SWD/007
+                </small>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="header-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-controls="sidebar"
+                    aria-expanded="false">
+
+                    ☰
+
+                </button>
+
+                <div>
+
+                    <h1 id="pageTitle">
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Your examination instructions,
+                        rules and guidelines in one place.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-outline"
+                    id="viewGuidelinesBtn">
+
+                    📚 View Guidelines
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="addGuidelineBtn">
+
+                    + Add Guideline
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             DASHBOARD STATISTICS
+        ====================================== -->
+
+        <section
+            class="stats-container"
+            id="statsSection">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    📚
+                </div>
+
+                <div class="stat-details">
+
+                    <p>Total Guidelines</p>
+
+                    <h2 id="totalGuidelines">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    ✅
+                </div>
+
+                <div class="stat-details">
+
+                    <p>Read Guidelines</p>
+
+                    <h2 id="readGuidelines">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    📢
+                </div>
+
+                <div class="stat-details">
+
+                    <p>Announcements</p>
+
+                    <h2 id="totalAnnouncements">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    📋
+                </div>
+
+                <div class="stat-details">
+
+                    <p>Instructions</p>
+
+                    <h2 id="totalInstructions">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             WELCOME BANNER
+        ====================================== -->
+
+        <section
+            class="welcome-banner"
+            id="welcomeBanner">
+
+            <div class="welcome-content">
+
+                <span class="welcome-label">
+                    EXAMINATION PREPARATION
+                </span>
+
+                <h2>
+                    Stay Informed.<br>
+                    Stay Prepared.
+                </h2>
+
+                <p>
+                    Access important examination rules,
+                    instructions, and announcements
+                    to prepare confidently for your exams.
+                </p>
+
+                <button
+                    type="button"
+                    class="btn btn-light"
+                    id="exploreGuidelinesBtn">
+
+                    Explore Guidelines →
+
+                </button>
+
+            </div>
+
+            <div
+                class="welcome-illustration"
+                aria-hidden="true">
+
+                🎓
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             DASHBOARD QUICK ACCESS
+        ====================================== -->
+
+        <section
+            class="content-section"
+            id="quickAccessSection">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Quick Access</h2>
+
+                    <p>
+                        Easily access important
+                        examination information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-access-grid">
+
+                <button
+                    type="button"
+                    class="quick-card"
+                    data-view="guidelines">
+
+                    <span class="quick-icon blue">
+                        📚
+                    </span>
+
+                    <h3>Examination Guidelines</h3>
+
+                    <p>
+                        Read examination rules,
+                        regulations and guidelines.
+                    </p>
+
+                    <span class="quick-link">
+                        View Guidelines →
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="quick-card"
+                    data-view="instructions">
+
+                    <span class="quick-icon green">
+                        📋
+                    </span>
+
+                    <h3>Examination Instructions</h3>
+
+                    <p>
+                        Understand what to do
+                        before, during and after exams.
+                    </p>
+
+                    <span class="quick-link">
+                        View Instructions →
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="quick-card"
+                    data-view="announcements">
+
+                    <span class="quick-icon orange">
+                        📢
+                    </span>
+
+                    <h3>Exam Announcements</h3>
+
+                    <p>
+                        Stay updated with important
+                        examination notices.
+                    </p>
+
+                    <span class="quick-link">
+                        View Announcements →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             GUIDELINES SECTION
+        ====================================== -->
+
+        <section
+            class="content-section"
+            id="guidelinesSection"
+            hidden>
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Examination Guidelines</h2>
+
+                    <p>
+                        Browse examination rules
+                        and important regulations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH AND FILTER -->
+
+            <div class="filter-bar">
+
+                <div class="search-box">
+
+                    <label
+                        class="sr-only"
+                        for="guidelineSearch">
+
+                        Search guidelines
+
+                    </label>
+
+                    <input
+                        type="search"
+                        id="guidelineSearch"
+                        placeholder="Search examination guidelines...">
+
+                </div>
+
+
+                <div class="filter-box">
+
+                    <label
+                        class="sr-only"
+                        for="categoryFilter">
+
+                        Filter by category
+
+                    </label>
+
+                    <select id="categoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="general">
+                            General Rules
+                        </option>
+
+                        <option value="conduct">
+                            Exam Conduct
+                        </option>
+
+                        <option value="materials">
+                            Allowed Materials
+                        </option>
+
+                        <option value="malpractice">
+                            Exam Malpractice
+                        </option>
+
+                        <option value="submission">
+                            Submission Rules
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- GUIDELINE CARDS -->
+
+            <div
+                class="guidelines-grid"
+                id="guidelinesContainer">
+
+                <!-- Generated by JavaScript -->
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="empty-state"
+                id="guidelinesEmpty"
+                hidden>
+
+                <div class="empty-icon">
+                    📚
+                </div>
+
+                <h3>No Guidelines Found</h3>
+
+                <p>
+                    No examination guidelines
+                    match your search.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INSTRUCTIONS SECTION
+        ====================================== -->
+
+        <section
+            class="content-section"
+            id="instructionsSection"
+            hidden>
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Examination Instructions</h2>
+
+                    <p>
+                        Important instructions
+                        for examination preparation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="instructions-layout">
+
+                <!-- BEFORE EXAM -->
+
+                <div class="instruction-card">
+
+                    <div class="instruction-heading">
+
+                        <span class="instruction-icon blue">
+                            📅
+                        </span>
+
+                        <div>
+
+                            <h3>Before the Examination</h3>
+
+                            <p>
+                                Preparation guidelines
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <ul id="beforeExamList">
+
+                        <!-- Generated by JavaScript -->
+
+                    </ul>
+
+                </div>
+
+
+                <!-- DURING EXAM -->
+
+                <div class="instruction-card">
+
+                    <div class="instruction-heading">
+
+                        <span class="instruction-icon green">
+                            ✍️
+                        </span>
+
+                        <div>
+
+                            <h3>During the Examination</h3>
+
+                            <p>
+                                Examination hall instructions
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <ul id="duringExamList">
+
+                        <!-- Generated by JavaScript -->
+
+                    </ul>
+
+                </div>
+
+
+                <!-- AFTER EXAM -->
+
+                <div class="instruction-card">
+
+                    <div class="instruction-heading">
+
+                        <span class="instruction-icon orange">
+                            📝
+                        </span>
+
+                        <div>
+
+                            <h3>After the Examination</h3>
+
+                            <p>
+                                Submission and exit guidelines
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <ul id="afterExamList">
+
+                        <!-- Generated by JavaScript -->
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ANNOUNCEMENTS SECTION
+        ====================================== -->
+
+        <section
+            class="content-section"
+            id="announcementsSection"
+            hidden>
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Examination Announcements</h2>
+
+                    <p>
+                        Important notices and updates
+                        relating to examinations.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="addAnnouncementBtn">
+
+                    + Add Announcement
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="announcements-container"
+                id="announcementsContainer">
+
+                <!-- Generated by JavaScript -->
+
+            </div>
+
+
+            <div
+                class="empty-state"
+                id="announcementsEmpty"
+                hidden>
+
+                <div class="empty-icon">
+                    📢
+                </div>
+
+                <h3>No Announcements</h3>
+
+                <p>
+                    Examination announcements
+                    will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             MANAGE CONTENT SECTION
+        ====================================== -->
+
+        <section
+            class="content-section"
+            id="manageSection"
+            hidden>
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Manage Examination Content</h2>
+
+                    <p>
+                        Add, edit, and organize
+                        examination information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="manage-grid">
+
+                <div class="manage-card">
+
+                    <div class="manage-icon">
+                        📚
+                    </div>
+
+                    <h3>Manage Guidelines</h3>
+
+                    <p>
+                        Create, edit and delete
+                        examination guidelines.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="manageGuidelinesBtn">
+
+                        Manage Guidelines
+
+                    </button>
+
+                </div>
+
+
+                <div class="manage-card">
+
+                    <div class="manage-icon">
+                        📢
+                    </div>
+
+                    <h3>Manage Announcements</h3>
+
+                    <p>
+                        Create and manage
+                        examination announcements.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="manageAnnouncementsBtn">
+
+                        Manage Announcements
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-notice">
+
+                <strong>
+                    ℹ️ Local Demonstration System
+                </strong>
+
+                <p>
+                    This educational version stores
+                    content in your browser using
+                    Local Storage. It does not provide
+                    authenticated administrator access
+                    or publish changes to other devices.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+
+        <footer class="footer">
+
+            <p>
+                Developed by
+                <strong>
+                    ENAPE JAPHET OJONUGWA
+                </strong>
+            </p>
+
+            <p>
+                Matric Number:
+                2025/HND/SWD/007
+            </p>
+
+            <p>
+                SWD 417 Assignment |
+                Examination Instructions and
+                Guidelines Management System
+            </p>
+
+            <p>
+                &copy; 2026 ExamGuide.
+                All Rights Reserved.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================
+         ADD / EDIT GUIDELINE MODAL
+    ====================================== -->
+
+    <div
+        class="modal-overlay"
+        id="guidelineModal"
+        hidden>
+
+        <div
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="guidelineModalTitle">
+
+            <div class="modal-header">
+
+                <h2 id="guidelineModalTitle">
+                    Add Examination Guideline
+                </h2>
+
+                <button
+                    type="button"
+                    class="modal-close"
+                    id="closeGuidelineModal"
+                    aria-label="Close guideline form">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+
+            <form id="guidelineForm">
+
+                <input
+                    type="hidden"
+                    id="guidelineId">
+
+
+                <div class="form-group">
+
+                    <label for="guidelineTitle">
+                        Guideline Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="guidelineTitle"
+                        placeholder="e.g. Examination Hall Conduct"
+                        maxlength="120"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="guidelineCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="guidelineCategory"
+                        required>
+
+                        <option value="general">
+                            General Rules
+                        </option>
+
+                        <option value="conduct">
+                            Exam Conduct
+                        </option>
+
+                        <option value="materials">
+                            Allowed Materials
+                        </option>
+
+                        <option value="malpractice">
+                            Exam Malpractice
+                        </option>
+
+                        <option value="submission">
+                            Submission Rules
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="guidelineDescription">
+                        Guideline Description
+                    </label>
+
+                    <textarea
+                        id="guidelineDescription"
+                        rows="5"
+                        maxlength="2000"
+                        placeholder="Enter the examination guideline..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline"
+                        id="cancelGuidelineBtn">
+
+                        Cancel
+
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        Save Guideline
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         ADD ANNOUNCEMENT MODAL
+    ====================================== -->
+
+    <div
+        class="modal-overlay"
+        id="announcementModal"
+        hidden>
+
+        <div
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="announcementModalTitle">
+
+            <div class="modal-header">
+
+                <h2 id="announcementModalTitle">
+                    Add Examination Announcement
+                </h2>
+
+                <button
+                    type="button"
+                    class="modal-close"
+                    id="closeAnnouncementModal"
+                    aria-label="Close announcement form">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+
+            <form id="announcementForm">
+
+                <div class="form-group">
+
+                    <label for="announcementTitle">
+                        Announcement Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="announcementTitle"
+                        placeholder="e.g. Examination Timetable Notice"
+                        maxlength="120"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="announcementMessage">
+                        Announcement Message
+                    </label>
+
+                    <textarea
+                        id="announcementMessage"
+                        rows="5"
+                        maxlength="2000"
+                        placeholder="Enter the examination announcement..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="announcementPriority">
+                        Priority
+                    </label>
+
+                    <select
+                        id="announcementPriority">
+
+                        <option value="normal">
+                            Normal
+                        </option>
+
+                        <option value="important">
+                            Important
+                        </option>
+
+                        <option value="urgent">
+                            Urgent
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline"
+                        id="cancelAnnouncementBtn">
+
+                        Cancel
+
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        Publish Announcement
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
